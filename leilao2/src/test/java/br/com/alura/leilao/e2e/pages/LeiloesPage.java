@@ -11,7 +11,9 @@ public class LeiloesPage {
 
 	private WebDriver driver;
 
-	private static String PAGE_URL = "http://localhost:8080/leiloes";
+	private static String PORTA ="8081";
+	
+	private static String PAGE_URL = "http://localhost:"+PORTA+"/leiloes";
 	
 	public LeiloesPage(WebDriver driver) {
 		this.driver = driver;

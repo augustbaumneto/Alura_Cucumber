@@ -9,18 +9,19 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public class DetalhesDoLeilaoPage {
+public class DetalhesDoLeilaoPage extends ObjectPageBase{
 
 	private WebDriver driver;
 	private WebDriverWait wait;
 
 	public DetalhesDoLeilaoPage(WebDriver driver) {
 		this.driver = driver;
-		this.wait = new WebDriverWait(driver, 5);
+		this.wait = new WebDriverWait(driver, 10);
 	}
 
 	public void darLance(String valor) {
 		
+		esperaElemento(By.id("valor"), driver);
 		
 		WebElement txtValor = driver.findElement(By.id("valor"));
 		txtValor.sendKeys(valor);

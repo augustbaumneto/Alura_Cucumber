@@ -10,7 +10,9 @@ public class LoginPage {
 
 	private WebDriver driver;
 	
-	private static String URL_LOGIN_PAGE = "http://localhost:8080/login";
+	private static String PORTA ="8081";
+	
+	private static String URL_LOGIN_PAGE = "http://localhost:"+PORTA+"/login";
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;

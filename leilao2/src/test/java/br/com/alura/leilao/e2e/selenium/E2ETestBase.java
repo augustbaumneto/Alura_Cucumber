@@ -14,6 +14,8 @@ public class E2ETestBase {
 
 	private static WebDriver driver;
 
+	private static String PORTA = "8081";
+	
 //  Documentação
 //	http://chromedriver.storage.googleapis.com/index.html
 //	https://github.com/mozilla/geckodriver/releases
@@ -31,14 +33,14 @@ public class E2ETestBase {
 	
 	@BeforeEach
 	public void setUp() {
-        driver.get("http://localhost:8080/db/seed");
+        driver.get("http://localhost:"+PORTA+"/db/seed");
 	}
 
 
 
 	@AfterEach
 	public void cleanUp() {
-        driver.get("http://localhost:8080/db/limpa");
+        driver.get("http://localhost:"+PORTA+"/db/limpa");
 		driver.manage().deleteAllCookies();
 	}
 
