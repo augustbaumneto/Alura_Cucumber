@@ -17,7 +17,7 @@ import org.junit.platform.suite.api.SuiteDisplayName;
 @SuiteDisplayName("Testes com Cucumber")
 @IncludeEngines("cucumber")
 @SelectClasspathResource("features")
-@IncludeTags("leilao | lances")
+@IncludeTags("leilao | lances | login")
 
 //Configura para o Gherkin sair no console.
 //@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty")

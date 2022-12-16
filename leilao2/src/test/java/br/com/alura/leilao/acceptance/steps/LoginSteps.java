@@ -35,12 +35,6 @@ public class LoginSteps {
 		senhalogin = SENHA_VALIDA;
 	}
 	
-	@Quando("realiza login")
-	public void realiza_login() {
-		this.paginaleiloes = this.paginalogin.realizaLoginComo(usuariologin, senhalogin); 		
-		
-	}
-	
 	@Entao("e redirecionado para a pagina de leiloes logada")
 	public void e_redirecionado_para_a_pagina_de_leiloes_logada() {
 		assertTrue(this.paginaleiloes.estaNaPaginaDeLeiloes());
