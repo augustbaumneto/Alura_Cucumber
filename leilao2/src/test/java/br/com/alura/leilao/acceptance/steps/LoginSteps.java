@@ -1,6 +1,5 @@
 package br.com.alura.leilao.acceptance.steps;
 
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import br.com.alura.leilao.e2e.pages.Browser;
@@ -45,6 +44,7 @@ public class LoginSteps {
 	@Entao("e redirecionado para a pagina de leiloes logada")
 	public void e_redirecionado_para_a_pagina_de_leiloes_logada() {
 		assertTrue(this.paginaleiloes.estaNaPaginaDeLeiloes());
+		navegador.clean();
 	}
 	
 	@Dado("um usuario invalido")
@@ -66,7 +66,8 @@ public class LoginSteps {
 	
 	@Entao("continua na pagina de login")
 	public void continua_na_pagina_de_login() {
-		assertFalse(this.paginaleiloes.estaNaPaginaDeLeiloes());
+		assertTrue(this.paginalogin.estaNaPaginaDeLoginComErro());
+		navegador.clean();
 	}
 	
 }
