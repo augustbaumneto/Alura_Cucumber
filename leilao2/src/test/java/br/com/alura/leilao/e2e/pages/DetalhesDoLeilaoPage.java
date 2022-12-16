@@ -21,9 +21,11 @@ public class DetalhesDoLeilaoPage extends ObjectPageBase{
 
 	public void darLance(String valor) {
 		
-		esperaElemento(By.id("valor"), driver);
+		By localizador = By.id("valor");
 		
-		WebElement txtValor = driver.findElement(By.id("valor"));
+		esperaElemento(localizador, driver);
+		
+		WebElement txtValor = driver.findElement(localizador);
 		txtValor.sendKeys(valor);
 		
 		try {
