@@ -23,9 +23,11 @@ public class LeiloesPage extends ObjectPageBase{
 		driver.get(PAGE_URL);
 	}
 
-	public boolean existe(String nomeProduto, String valor, String usuario) {
-		return driver.getCurrentUrl().endsWith("/leiloes") && driver.getPageSource().contains(nomeProduto) && 
-				driver.getPageSource().contains(valor);
+	public boolean existe(String nomeProduto, String valor, String usuario, String data) {
+		return driver.getPageSource().contains(usuario) && 
+				driver.getPageSource().contains(nomeProduto) && 
+				driver.getPageSource().contains(valor) &&
+				driver.getPageSource().contains(data);
 	}
 
 	public NovoLeilaoPage visitaPaginaParaCriarUmNovoLeilao() {
