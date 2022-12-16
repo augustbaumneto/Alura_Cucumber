@@ -7,6 +7,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 public class BrowserFactory {
 
+	// chrome, firefox ou htmlunit
 	private static final String NAVEGADOR = "chrome";
 	
 //  Documentação

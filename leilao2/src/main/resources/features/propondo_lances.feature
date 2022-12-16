@@ -1,5 +1,6 @@
 # language: pt
 
+@lances
 Funcionalidade: Propondo lances ao leilao
   
 
