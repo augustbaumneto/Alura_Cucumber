@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LeiloesPage {
+public class LeiloesPage extends ObjectPageBase{
 
 	private WebDriver driver;
 
@@ -80,6 +80,7 @@ public class LeiloesPage {
 	}
 	
 	public boolean estaNaPaginaDeLeiloes() {
+		esperaElemento(By.xpath("//h1[contains(text(),'Todos leilões')]"), driver);
 		return this.driver.getCurrentUrl().endsWith("/leiloes");
 	}
 
