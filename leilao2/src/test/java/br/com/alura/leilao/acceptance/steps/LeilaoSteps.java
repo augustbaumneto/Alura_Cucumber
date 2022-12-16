@@ -60,7 +60,7 @@ public class LeilaoSteps {
 
 	@Então("o novo leilão é criado na tabela")
 	public void o_novo_leilão_é_criado_na_tabela() {
-		assertTrue(this.paginaleiloes.existe(NOMELEILAO1, VALORINICIALVALIDO, USUARIO));
+		assertTrue(this.paginaleiloes.existe(nomeleilao, valorinicialleilao, USUARIO, dataaberturaleilao));
 		navegador.clean();
 	}
 	
